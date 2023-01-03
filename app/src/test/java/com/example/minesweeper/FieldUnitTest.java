@@ -10,7 +10,7 @@ import org.mockito.Mockito;
 import static org.junit.Assert.*;
 
 @RunWith(JUnit4.class)
-public class FieldTest {
+public class FieldUnitTest {
 
     private Field field;
 
