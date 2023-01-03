@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/border"
+    tools:context=".GameSettingsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonBack">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewEasy"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:text="Easy"
+                    android:textColor="#091C17"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageButtonBack" />
+
+                <TextView
+                    android:id="@+id/textViewEasyDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:text="Field 8x8 - 10 bombs"
+                    android:textColor="#659A8C"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewEasy" />
+
+                <TextView
+                    android:id="@+id/textViewNormal"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="35dp"
+                    android:text="Normal"
+                    android:textColor="#091C17"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewEasy" />
+
+                <TextView
+                    android:id="@+id/textViewNormalDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:text="Field 16x12 - 30 bombs"
+                    android:textColor="#659A8C"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewNormal" />
+
+                <TextView
+                    android:id="@+id/textViewHard"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="35dp"
+                    android:text="Hard"
+                    android:textColor="#091C17"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewNormal" />
+
+                <TextView
+                    android:id="@+id/textViewHardDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:text="Field 20x16 - 60 bombs"
+                    android:textColor="#659A8C"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewHard" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonEasy"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:buttonTint="#091C17"
+                        android:text="easy" />
+
+                    <TextView
+                        android:id="@+id/textViewInto1"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonNormal"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:buttonTint="#091C17"
+                        android:text="normal" />
+
+                    <TextView
+                        android:id="@+id/textViewInto2"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonHard"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:buttonTint="#091C17"
+                        android:text="hard" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textViewDurationLongClickDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Duration of a long click"
+                    android:textColor="#091C17"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewDurationLongClick"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewHardDescription" />
+
+                <TextView
+                    android:id="@+id/textViewDurationLongClick"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:gravity="right"
+                    android:text="0"
+                    android:textColor="#091C17"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewDurationLongClickDescription"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewDurationLongClickDescription"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutFlagsChord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutRecursiveChord">
+
+                    <TextView
+                        android:id="@+id/textViewFlagsChord"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Enable flags chord"
+                        android:textColor="#091C17"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxFlagsChord"
+                        app:layout_constraintHorizontal_bias="0.068"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="-3dp" />
+
+                    <TextView
+                        android:id="@+id/textViewFlagsChordDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="When you click on an open cell, the flags will be automatically set to all neighboring ones closed cells, provided that their number does not exceed the number in the pressed cell"
+                        android:textColor="#659A8C"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxFlagsChord"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewFlagsChord" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxFlagsChord"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:buttonTint="#091C17"
+                        android:onClick="onCheckBoxClicked"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutRecursiveChord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutShowBombs">
+
+                    <TextView
+                        android:id="@+id/textViewRecursiveChord"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Enable recursive chord"
+                        android:textColor="#091C17"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxRecursiveChord"
+                        app:layout_constraintHorizontal_bias="0.068"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="-3dp" />
+
+                    <TextView
+                        android:id="@+id/textViewRecursiveChordDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="When you click on a cell with a number, not only the neighboring closed cells will open, but also the neighbors of neighboring cells (etc.). The chord works only if the number in the cell is equal to the number of its neighboring flags"
+                        android:textColor="#659A8C"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxRecursiveChord"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewRecursiveChord" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxRecursiveChord"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:buttonTint="#091C17"
+                        android:onClick="onCheckBoxClicked"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutShowBombs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutRestart">
+
+                    <TextView
+                        android:id="@+id/textViewShowBombs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Enable show bombs"
+                        android:textColor="#091C17"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxShowBombs"
+                        app:layout_constraintHorizontal_bias="0.068"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="-3dp" />
+
+                    <TextView
+                        android:id="@+id/textViewShowBombsDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="In case of defeat, show bombs"
+                        android:textColor="#659A8C"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxShowBombs"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewShowBombs" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxShowBombs"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:buttonTint="#091C17"
+                        android:onClick="onCheckBoxClicked"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutRestart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutCancelingMove">
+
+                    <TextView
+                        android:id="@+id/textViewRestart"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Enable game restart"
+                        android:textColor="#091C17"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxRestart"
+                        app:layout_constraintHorizontal_bias="0.068"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="-3dp" />
+
+                    <TextView
+                        android:id="@+id/textViewRestartDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="If enabled, you can try playing the game you just lost or won again"
+                        android:textColor="#659A8C"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxRestart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewRestart" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxRestart"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:buttonTint="#091C17"
+                        android:onClick="onCheckBoxClicked"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutEasyStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintTop_toBottomOf="@+id/seekBarDurationLongClick">
+
+                    <TextView
+                        android:id="@+id/textViewEasyStart"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Easy start"
+                        android:textColor="#091C17"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxEasyStart"
+                        app:layout_constraintHorizontal_bias="0.068"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="-3dp" />
+
+                    <TextView
+                        android:id="@+id/textViewEasyStartDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="The first click is always a clearing (a safe area will open)"
+                        android:textColor="#659A8C"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxEasyStart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewEasyStart" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxEasyStart"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:buttonTint="#091C17"
+                        android:onClick="onCheckBoxClicked"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutCancelingMove"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutEasyStart">
+
+                    <TextView
+                        android:id="@+id/textViewCancelingMove"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Enable canceling a move"
+                        android:textColor="#091C17"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxCancelingMove"
+                        app:layout_constraintHorizontal_bias="0.068"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="-3dp" />
+
+                    <TextView
+                        android:id="@+id/textViewCancelingMoveDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="In case of defeat, cancel the last step"
+                        android:textColor="#659A8C"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkBoxCancelingMove"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewCancelingMove" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCancelingMove"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:buttonTint="#091C17"
+                        android:onClick="onCheckBoxClicked"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <SeekBar
+                    android:id="@+id/seekBarDurationLongClick"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:progress="0"
+                    android:progressTint="#091C17"
+                    android:thumbTint="#091C17"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDurationLongClickDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textViewSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="SETTINGS"
+        android:textColor="#091C17"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonBack"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/image_button_back"
+        android:onClick="imageButtonBackClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

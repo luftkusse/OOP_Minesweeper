@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayotInside"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/dark_border"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewBack2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBack1"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageViewBack1"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:foreground="@color/border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/border" />
+
+    <ImageView
+        android:id="@+id/imageViewBack2"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:foreground="@color/border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@color/border" />
+
+    <ImageView
+        android:id="@+id/imageViewPanel1"
+        android:layout_width="92dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:foreground="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@color/black" />
+
+    <ImageView
+        android:id="@+id/imageViewPanel2"
+        android:layout_width="92dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:foreground="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@color/black" />
+
+    <ImageView
+        android:id="@+id/imageViewNumberFlags1"
+        android:layout_width="28dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/number_0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPanel1"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPanel1" />
+
+    <ImageView
+        android:id="@+id/imageViewNumberTimer1"
+        android:layout_width="28dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/number_0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPanel2"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPanel2" />
+
+    <ImageView
+        android:id="@+id/imageViewNumberTimer2"
+        android:layout_width="28dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/number_0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewNumberTimer1"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPanel2" />
+
+    <ImageView
+        android:id="@+id/imageViewNumberTimer3"
+        android:layout_width="28dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/number_0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewNumberTimer2"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPanel2" />
+
+    <ImageView
+        android:id="@+id/imageViewNumberFlags2"
+        android:layout_width="28dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/number_0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewNumberFlags1"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPanel1" />
+
+    <ImageView
+        android:id="@+id/imageViewNumberFlags3"
+        android:layout_width="28dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/number_0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewNumberFlags2"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPanel1" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSmile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/smile_standart"
+        android:onClick="imageButtonSmileClick"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBack1"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewBack1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBack1" />
+
+    <ImageButton
+        android:id="@+id/imageButtonChangeMode"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/mode_open"
+        android:onClick="imageButtonChangeModeClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBack2"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayotInside" />
+
+    <ImageButton
+        android:id="@+id/imageButtonBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/image_button_back"
+        android:onClick="imageButtonBackClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBack2" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCancel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/image_button_cancel_off"
+        android:onClick="imageButtonCancelClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBack2" />
+
+    <ImageButton
+        android:id="@+id/imageButtonRestart"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/image_button_restart"
+        android:onClick="imageButtonRestartClick"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonChangeMode"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBack2" />
+
+    <ImageButton
+        android:id="@+id/imageButtonShowBombs"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/image_button_show_bombs"
+        android:onClick="imageButtonShowBombsClick"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonCancel"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBack2"
+        app:layout_constraintVertical_bias="0.545" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
